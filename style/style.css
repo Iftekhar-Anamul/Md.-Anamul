@@ -1,0 +1,351 @@
+/* root colors and fonts sizes */
+:root {
+  --black: #151515;
+  --green: #4ee1a0;
+  --dark-grey: #242424;
+  --grey: #d9d9d9;
+  --white: #fff;
+  /* fonts */
+  --heading-xl: 5.5rem;
+  --heading-l: 3rem;
+  --heading-m: 1.5rem;
+  --body-text: 1.125rem;
+}
+
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+/* 
+font-family: "Space Grotesk", serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* section {
+  margin-bottom: 200px;
+} */
+.container {
+  max-width: 1110px;
+  /* max-width: 1440px; */
+  margin: 0 auto;
+}
+body {
+  font-family: "Space Grotesk", serif;
+  background-color: var(--black);
+  color: var(--white);
+}
+p {
+  color: var(--grey);
+  font-size: var(--body-text);
+}
+
+header h2 {
+  color: var(--white);
+  font-size: var(--heading-l);
+  text-align: center;
+  /* padding-top: 23%; */
+}
+/* common css end */
+
+/* header start here */
+header {
+  /* background-color: var(--black); */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  padding-top: 2.44rem;
+}
+header .logo h2 {
+  max-width: 100%;
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Space Grotesk", serif;
+}
+
+/* icons */
+header .icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2.75rem;
+  padding-right: 2.88rem;
+}
+
+/* header ends here */
+/* oval section start */
+main section .oval img {
+  width: 530px;
+  height: 129px;
+  position: absolute;
+  top: 133px;
+  left: px;
+  z-index: -2;
+}
+main section .single-oval img {
+  position: absolute;
+  top: 431px;
+  right: 380px;
+}
+/* oval section ends */
+/* .hero section start here  */
+
+.hero-section {
+  /* height: 60vh; */
+  /* max-width: 1110px; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  position: relative;
+}
+
+.hero-content {
+  padding-top: 120px;
+  /* position: absolute;
+  top: 10%;
+  left: 5%; */
+}
+.hero-content h1 {
+  font-size: var(--heading-xl);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 88px;
+  /* letter-spacing: 2.5px; */
+  padding-bottom: 2.7rem;
+}
+.hero-content h1 > span {
+  border-bottom: 3px solid var(--green);
+}
+.hero-content p {
+  padding-bottom: 4.25rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+.hero-content a {
+  color: var(--white);
+  font-size: 1.625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust distance from text */
+  width: 170px;
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--green); /* Green underline */
+  transition: width 0.3s ease;
+}
+.hero-content a:hover {
+  color: var(--green);
+}
+.hero-img {
+  width: 445px;
+  height: 720px;
+  position: absolute;
+  top: -90px;
+  right: 0;
+  z-index: -1;
+}
+
+.hero-img img {
+  width: 100%;
+}
+.hero-hr {
+  margin-top: 210px;
+}
+/* .hero section end */
+
+/* Skills section start */
+#skills-section {
+  position: relative;
+  margin-bottom: 140px;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-top: 72px;
+}
+.skill {
+  padding-top: 60px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 14px;
+}
+.skill h3 {
+  font-size: var(--heading-l);
+}
+.skill p {
+  font-size: var(--body-text);
+  color: var(--grey);
+}
+.skill-oval img {
+  width: 530px;
+  height: 129px;
+  position: absolute;
+  top: 253px;
+  right: -20px;
+}
+
+/* Skills section ends */
+
+/* projects section style start */
+
+.projects-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.projects-title h2 {
+  font-size: var(--heading-xl);
+  line-height: 88px;
+}
+.projects-title a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+.projects-title > .project-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 102px;
+  height: 2px;
+  background-color: var(--green);
+  transition: width 0.3s ease;
+}
+.projects-title a:hover {
+  color: var(--green);
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 70px;
+  margin-bottom: 140px;
+}
+.projects .tech {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.project h4 {
+  font-size: var(--heading-m);
+  font-weight: 700;
+  line-height: 32px;
+  padding: 20px 0 7px 0;
+}
+.projects .tech > p {
+  font-size: var(--body-text);
+  color: var(--grey);
+  font-weight: 500;
+  line-height: 28px;
+}
+
+/* projects section style ends */
+
+/* contact section start */
+
+footer {
+  background-color: var(--dark-grey);
+  height: 635px;
+  /* padding-bottom: 92px; */
+}
+#contact {
+  position: relative;
+}
+.contact-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.contact-sec {
+  padding-top: 92px;
+}
+.contact-content h2 {
+  font-size: var(--heading-xl);
+  line-height: 88px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+.contact-content p {
+  font-size: var(--body-text);
+  width: 425px;
+  height: 84px;
+  line-height: 28px;
+  font-family: "Space Grotesk", serif;
+}
+.contact-form {
+  width: 445px;
+  position: relative;
+}
+.contact-form input,
+textarea {
+  background-color: transparent;
+  border: none;
+  padding: 30px;
+  color: white;
+  outline: none;
+}
+.contact-form textarea {
+  width: 100%;
+  height: 107px;
+}
+.contact-form > hr {
+  width: 100%;
+}
+.contact-form p {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+  font-weight: 700;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  border-bottom: 2px solid var(--green);
+}
+#contact .contact-oval img {
+  width: 530px;
+  height: 80px;
+  position: absolute;
+  left: 0;
+}
+.cont-hr {
+  margin-top: 110px;
+  margin-bottom: 47px;
+}
+/* contact section ends */
+/* footer section start */
+
+.footer-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.footer-sec .logo h2 {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0.44px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
